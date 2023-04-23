@@ -7,7 +7,7 @@ import os
 import openai
 import math
 import faiss
-from GenerativeAgentClass import GenerativeAgent
+#from GenerativeAgentClass import GenerativeAgent
 
 os.environ["OPENAI_API_KEY"] = "7123602c74c8447e9137b562388ae55c"
 os.environ["OPENAI_API_BASE"] = "https://pmopenai.openai.azure.com/"
