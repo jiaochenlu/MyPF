@@ -1,0 +1,5 @@
+$schema: https://azuremlschemas.azureedge.net/latest/flow.schema.json
+name: extract_intent_flow
+display_name: extract_intent_flow
+type: standard
+path: ./flow.dag.yaml
