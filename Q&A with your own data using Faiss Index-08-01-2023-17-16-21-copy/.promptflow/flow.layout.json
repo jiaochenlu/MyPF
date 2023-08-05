@@ -1,0 +1,47 @@
+{
+  "nodeLayouts": {
+    "inputs": {
+      "x": 12.0,
+      "y": 62.0,
+      "width": 0.0,
+      "height": 0.0,
+      "index": -1
+    },
+    "outputs": {
+      "x": 12.0,
+      "y": 612.0,
+      "width": 0.0,
+      "height": 0.0,
+      "index": -1
+    },
+    "generate_embedding": {
+      "x": 67.5,
+      "y": 172.0,
+      "width": 0.0,
+      "height": 0.0,
+      "index": 0
+    },
+    "lookup": {
+      "x": 67.5,
+      "y": 282.0,
+      "width": 0.0,
+      "height": 0.0,
+      "index": 1
+    },
+    "format_context": {
+      "x": 67.5,
+      "y": 392.0,
+      "width": 0.0,
+      "height": 0.0,
+      "index": 2
+    },
+    "answer_the_question_with_context": {
+      "x": 12.0,
+      "y": 502.0,
+      "width": 0.0,
+      "height": 0.0,
+      "index": 3
+    }
+  },
+  "orientation": 1
+}

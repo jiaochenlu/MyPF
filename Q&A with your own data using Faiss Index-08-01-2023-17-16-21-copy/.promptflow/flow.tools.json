@@ -1,0 +1,119 @@
+{
+  "package": {
+    "promptflow.tools.embedding.embedding": {
+      "name": "Embedding",
+      "type": "python",
+      "inputs": {
+        "connection": {
+          "name": "connection",
+          "type": [
+            "AzureOpenAIConnection",
+            "OpenAIConnection"
+          ]
+        },
+        "deployment_name": {
+          "name": "deployment_name",
+          "type": [
+            "string"
+          ],
+          "enabled_by": "connection",
+          "enabled_by_type": [
+            "AzureOpenAIConnection"
+          ],
+          "model_list": [
+            "text-embedding-ada-002",
+            "text-search-ada-doc-001",
+            "text-search-ada-query-001"
+          ],
+          "capabilities": {
+            "completion": false,
+            "chat_completion": false,
+            "embeddings": true
+          }
+        },
+        "model": {
+          "name": "model",
+          "type": [
+            "string"
+          ],
+          "enum": [
+            "text-embedding-ada-002",
+            "text-search-ada-doc-001",
+            "text-search-ada-query-001"
+          ],
+          "enabled_by": "connection",
+          "enabled_by_type": [
+            "OpenAIConnection"
+          ]
+        },
+        "input": {
+          "name": "input",
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "description": "Use Open AI's embedding model to create an embedding vector representing the input text.",
+      "module": "promptflow.tools.embedding",
+      "function": "embedding",
+      "is_builtin": true
+    },
+    "embeddingstore.tool.faiss_index_lookup.search": {
+      "name": "Faiss Index Lookup",
+      "type": "python",
+      "inputs": {
+        "path": {
+          "type": [
+            "string"
+          ]
+        },
+        "vector": {
+          "type": [
+            "list"
+          ]
+        },
+        "top_k": {
+          "type": [
+            "int"
+          ],
+          "default": "3"
+        }
+      },
+      "module": "embeddingstore.tool.faiss_index_lookup",
+      "class_name": "FaissIndexLookup",
+      "function": "search",
+      "is_builtin": true
+    }
+  },
+  "code": {
+    "format_context.py": {
+      "type": "python",
+      "inputs": {
+        "search_result": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "function": "format_context",
+      "is_builtin": false
+    },
+    "answer_the_question_with_context.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "contexts": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "description": "This is a llm tool",
+      "is_builtin": false
+    }
+  }
+}
